@@ -1,4 +1,5 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
+
 export default function SectionTitle({ title, seeAll }) {
   return (
     <div className="w-full border-bottom pb-1 border-success">
@@ -17,3 +18,8 @@ export default function SectionTitle({ title, seeAll }) {
     </div>
   );
 }
+
+SectionTitle.propTypes = {
+  title: PropTypes.string,
+  seeAll: PropTypes.bool,
+};

@@ -1,4 +1,5 @@
-// eslint-disable-next-line react/prop-types
+import PropTypes from 'prop-types';
+
 export default function CardMember({ position, name }) {
   return (
     <div className="col-md-6 col-6">
@@ -24,3 +25,8 @@ export default function CardMember({ position, name }) {
     </div>
   );
 }
+
+CardMember.propTypes = {
+  position: PropTypes.string,
+  name: PropTypes.string,
+};
