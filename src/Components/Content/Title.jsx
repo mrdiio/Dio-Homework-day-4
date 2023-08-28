@@ -3,7 +3,7 @@ import meeting from '../../assets/meeting.svg';
 
 export default function Title() {
   return (
-    <Container className="py-3">
+    <Container className="py-3 pt-md-5">
       <div
         className="card mb-3 border-0"
         style={{ maxWidth: '540', height: '10' }}

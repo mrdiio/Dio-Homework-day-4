@@ -1,7 +1,7 @@
 export default function CardPastMeetup({ data }) {
   return data.map((item, i) => (
     <div className="col-md-4" key={i}>
-      <div className="card">
+      <div className="card h-100">
         <div className="card-body">
           <h6 className="card-title border-bottom pb-2">{item.date}</h6>
           <p className="card-text">{item.title}</p>

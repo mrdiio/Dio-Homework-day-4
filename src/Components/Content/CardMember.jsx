@@ -7,7 +7,7 @@ export default function CardMember({ position, name }) {
           <div className="col-md-2 d-flex justify-content-center">
             <img
               src="https://via.placeholder.com/80"
-              className="img-fluid rounded-circle "
+              className="img-fluid rounded-circle"
               alt="..."
             />
           </div>

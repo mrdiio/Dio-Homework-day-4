@@ -7,7 +7,7 @@ export default function AboutMeetup() {
       <SectionTitle title="About Meetup" />
 
       <div className="row g-3 pt-3">
-        <div className="col-md-12">
+        <div className="col-md-12 px-3 px-md-2">
           <p>
             Come and meet other developers Labore nulla dolore sunt quis ad
             velit et aliqua id consequat amet excepteur magna cillum.
