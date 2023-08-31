@@ -1,6 +1,6 @@
 # HOMEWORK
 
-Create an UI for QTemu Apps. This app was created using ReactJS and Bootstrap 5.3.
+Create an UI for QTemu Apps. This app was created using ReactJS + VITE and Bootstrap 5.3.
 
 ## Run
 
