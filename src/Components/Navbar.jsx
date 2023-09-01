@@ -1,6 +1,17 @@
+import { useCallback, useEffect, useState } from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 
 export default function MyNavbar() {
+  const [clock, setClock] = useState(new Date());
+
+  const tick = useCallback(() => {
+    setClock(new Date());
+  }, []);
+
+  useEffect(() => {
+    setInterval(() => tick(), 1000);
+  }, [tick]);
+
   return (
     <Navbar bg="success" expand="lg" data-bs-theme="dark">
       <Container className="py-2">
@@ -13,6 +24,11 @@ export default function MyNavbar() {
           </Nav>
 
           <Nav>
+            {/* add text */}
+            <Nav.Item className="text-light d-flex align-items-center px-3">
+              <span>{clock.toLocaleTimeString()}</span>
+            </Nav.Item>
+
             <Button href="#link" variant="outline-light" className="px-5">
               Login
             </Button>
