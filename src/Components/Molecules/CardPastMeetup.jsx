@@ -1,3 +1,5 @@
+import MyButton from '../Atoms/MyButton';
+
 export default function CardPastMeetup({ data }) {
   return data.map((item, i) => (
     <div className="col-md-4" key={i}>
@@ -9,9 +11,13 @@ export default function CardPastMeetup({ data }) {
         <div className="card-footer bg-white border-0 d-flex align-items-end">
           <small className="text-muted">{item.viewers} went</small>
 
-          <button className="btn btn-success px-5 ms-auto" type="submit">
+          {/* <button className="btn btn-success px-5 ms-auto" type="submit">
             View
-          </button>
+          </button> */}
+
+          <MyButton variant="success" style="ms-auto px-5">
+            View
+          </MyButton>
         </div>
       </div>
     </div>

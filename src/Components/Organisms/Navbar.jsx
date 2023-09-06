@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import MyButton from '../Atoms/MyButton';
+import MyNavLink from '../Atoms/MyNavLink';
 
 export default function MyNavbar() {
   const [clock, setClock] = useState(new Date());
@@ -12,6 +14,17 @@ export default function MyNavbar() {
     setInterval(() => tick(), 1000);
   }, [tick]);
 
+  const menu = [
+    {
+      title: 'Create Meetup',
+      link: '#create-meetup',
+    },
+    {
+      title: 'Explore',
+      link: '#explore',
+    },
+  ];
+
   return (
     <Navbar bg="success" expand="lg" data-bs-theme="dark">
       <Container className="py-2">
@@ -19,19 +32,19 @@ export default function MyNavbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Create Meetup</Nav.Link>
-            <Nav.Link href="#link">Explore</Nav.Link>
+            {menu.map((item, i) => (
+              <MyNavLink key={i} href={item.link}>
+                {item.title}
+              </MyNavLink>
+            ))}
           </Nav>
 
           <Nav>
-            {/* add text */}
             <Nav.Item className="text-light d-flex align-items-center px-3">
               <span>{clock.toLocaleTimeString()}</span>
             </Nav.Item>
 
-            <Button href="#link" variant="outline-light" className="px-5">
-              Login
-            </Button>
+            <MyButton variant="outline-light"> Login </MyButton>
           </Nav>
         </Navbar.Collapse>
       </Container>

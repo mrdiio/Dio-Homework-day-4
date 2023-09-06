@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 
-export default function CardMember({ position, name }) {
+export default function CardMember({ position, name, image }) {
   return (
     <div className="col-md-6 col-6">
       <div className="card shadow-sm p-3">
         <div className="row g-2 h-100">
           <div className="col-md-2 d-flex justify-content-center">
             <img
-              src="https://via.placeholder.com/80"
+              src={image}
               className="img-fluid rounded-circle"
               alt="..."
             />
@@ -29,4 +29,5 @@ export default function CardMember({ position, name }) {
 CardMember.propTypes = {
   position: PropTypes.string,
   name: PropTypes.string,
+  image: PropTypes.string,
 };
